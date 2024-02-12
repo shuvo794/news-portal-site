@@ -5,7 +5,8 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-
+import logo from "../../../assets/logo.png"
+import Image from "next/image";
 
 const pages = ["Products", "Pricing", "Blog"];
 
@@ -13,10 +14,10 @@ function Navbar() {
   
 
   return (
-    <AppBar position="static">
+    <AppBar className="bg-black-600" position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          
+          <Image src={logo} width={100} height={100} alt="" />
          
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
