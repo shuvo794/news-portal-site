@@ -7,31 +7,78 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import logo from "../../../assets/logo.png"
 import Image from "next/image";
-
-const pages = ["Products", "Pricing", "Blog"];
+import Link from "next/link";
+import { IconButton, Stack } from "@mui/material";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import GoogleIcon from "@mui/icons-material/Google";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TelegramIcon from "@mui/icons-material/Telegram";
+const navItems = [
+  
+  {
+    route: "Home",
+    pathName: "/",
+  },
+  {
+    route: "Pages",
+    pathName: "/pages",
+  },
+  {
+    route: "Category",
+    pathName: "/category",
+  },
+  {
+    route: "News",
+    pathName: "/news",
+  },
+  {
+    route: "About",
+    pathName: "/about",
+  },
+  {
+    route: "Contuct",
+    pathName: "/contuct",
+  },
+];
 
 function Navbar() {
   
 
   return (
-    <AppBar className="bg-black-600" position="static">
+    <AppBar className="bg-black" position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Image src={logo} width={100} height={100} alt="" />
-         
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                {page}
-              </Button>
+
+          <Box className="text-center w-full">
+            {navItems.map((item) => (
+              <Link key={item} href={item.pathName}>
+                <Button className="text-white">{item.route}</Button>
+              </Link>
             ))}
           </Box>
-
-         
+          <Box
+            sx={{
+              "& svg": {
+                color: "white",
+              },
+            }}
+          >
+            <Stack direction="row">
+              <IconButton>
+                <FacebookIcon />
+              </IconButton>
+              <IconButton>
+                <GoogleIcon />
+              </IconButton>
+              <IconButton>
+                <LinkedInIcon />
+              </IconButton>
+              <IconButton>
+                <TelegramIcon />
+              </IconButton>
+            </Stack>
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>
