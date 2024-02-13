@@ -11,7 +11,7 @@ const Footer = () => {
       <Box className="bg-black px-2 py-10">
         <Container>
                 <Box
-                    className=""
+                    className="w-full text-center"
             sx={{
               "& svg": {
                 color: "white",
