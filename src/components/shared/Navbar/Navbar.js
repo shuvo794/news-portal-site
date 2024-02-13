@@ -13,6 +13,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import GoogleIcon from "@mui/icons-material/Google";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TelegramIcon from "@mui/icons-material/Telegram";
+import Header from "../Header/Header";
 const navItems = [
   
   {
@@ -45,43 +46,46 @@ function Navbar() {
   
 
   return (
-    <AppBar className="bg-black" position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Image src={logo} width={100} height={100} alt="" />
+    <>
+      <Header/>
+      <AppBar className="bg-black" position="static">
+        <Container maxWidth="xl">
+          <Toolbar disableGutters>
+            <Image src={logo} width={100} height={100} alt="" />
 
-          <Box className="text-center w-full">
-            {navItems.map((item) => (
-              <Link key={item} href={item.pathName}>
-                <Button className="text-white">{item.route}</Button>
-              </Link>
-            ))}
-          </Box>
-          <Box
-            sx={{
-              "& svg": {
-                color: "white",
-              },
-            }}
-          >
-            <Stack direction="row">
-              <IconButton>
-                <FacebookIcon />
-              </IconButton>
-              <IconButton>
-                <GoogleIcon />
-              </IconButton>
-              <IconButton>
-                <LinkedInIcon />
-              </IconButton>
-              <IconButton>
-                <TelegramIcon />
-              </IconButton>
-            </Stack>
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
+            <Box className="text-center w-full">
+              {navItems.map((item) => (
+                <Link key={item} href={item.pathName}>
+                  <Button className="text-white">{item.route}</Button>
+                </Link>
+              ))}
+            </Box>
+            <Box
+              sx={{
+                "& svg": {
+                  color: "white",
+                },
+              }}
+            >
+              <Stack direction="row">
+                <IconButton>
+                  <FacebookIcon />
+                </IconButton>
+                <IconButton>
+                  <GoogleIcon />
+                </IconButton>
+                <IconButton>
+                  <LinkedInIcon />
+                </IconButton>
+                <IconButton>
+                  <TelegramIcon />
+                </IconButton>
+              </Stack>
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBar>
+    </>
   );
 }
 export default Navbar;
