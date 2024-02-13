@@ -1,4 +1,4 @@
-import { Box, Button, Container } from '@mui/material';
+import { Box, Button, Container, Typography } from '@mui/material';
 
 import { IconButton, Stack } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -66,7 +66,10 @@ const Footer = () => {
                 <Button className="text-white">{item.route}</Button>
               </Link>
             ))}
-          </Box>
+                </Box>
+                <Typography variant='body2' color='gray' textAlign='center'>
+                    @2023 by The News Site Desgin by Shuvo
+                </Typography>
         </Container>
       </Box>
     );
