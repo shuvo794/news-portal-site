@@ -14,9 +14,10 @@ import GoogleIcon from "@mui/icons-material/Google";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import Header from "../Header/Header";
+
+// Navbar Menu
 const navItems = [
-  
-  {
+   {
     route: "Home",
     pathName: "/",
   },
@@ -43,8 +44,6 @@ const navItems = [
 ];
 
 function Navbar() {
-  
-
   return (
     <>
       <Header/>
