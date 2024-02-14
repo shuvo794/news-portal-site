@@ -34,6 +34,7 @@ const navItems = [
   },
 ];
 
+
 const Footer = () => {
     return (
       <Box className="bg-black px-2 py-10">
