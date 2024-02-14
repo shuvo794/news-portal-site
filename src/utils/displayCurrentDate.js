@@ -29,7 +29,7 @@ export function displayCurrentDate() {
   const date = currentDate.getDate();
   const year = currentDate.getFullYear();
 
-  return `${day}, ${month} ${date}, ${year}`;
+  return `${day},${month},${date},${year}`;
 }
 
 // Call the function to display the current date

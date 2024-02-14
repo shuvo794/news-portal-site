@@ -1,22 +1,27 @@
 import Image from 'next/image';
-import headerLogo from '../../../assets/Logo (2).png'
+import headerLogo from '../../../assets/Logo (4).png'
 import { Box, Typography } from '@mui/material';
 import { displayCurrentDate } from '@/utils/displayCurrentDate';
 const Header = () => {
   const currentDate = displayCurrentDate();
     return (
-      <Box>
+      <Box className="w-full">
         <Image
           className="mx-auto"
           src={headerLogo}
-          width={150}
-          height={100}
+          width={400}
+          height={50}
           alt="logo"
         />
-        <Typography variant="body1" color="gray" align="center">
+        <Typography
+          className="mt-5"
+          variant="body1"
+          color="gray"
+          textAlign="center"
+        >
           All Jurnalist Write articel here
         </Typography>
-        <Typography variant="body1" color="gray" align="center">
+        <Typography variant="body2" className="mb-5" textAlign="center">
           {currentDate}
         </Typography>
       </Box>
