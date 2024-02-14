@@ -19,7 +19,7 @@ const Header = () => {
           color="gray"
           textAlign="center"
         >
-          All Jurnalist Write articel here
+          All Jurnal Write articel here and publish content
         </Typography>
         <Typography variant="body2" className="mb-5" textAlign="center">
           {currentDate}
