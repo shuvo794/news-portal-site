@@ -23,7 +23,6 @@ export function displayCurrentDate() {
     "November",
     "December",
   ];
-
   const day = days[currentDate.getDay()];
   const month = months[currentDate.getMonth()];
   const date = currentDate.getDate();
@@ -32,4 +31,4 @@ export function displayCurrentDate() {
   return `${day},${month},${date},${year}`;
 }
 
-// Call the function to display the current date
+
