@@ -59,7 +59,7 @@ const Footer = () => {
               <TelegramIcon />
             </IconButton>
           </Box>
-<Box className="text-center w-full">
+          <Box className="text-center w-full">
             {navItems.map((item) => (
               <Link key={item} href={item.pathName}>
                 <Button className="text-white">{item.route}</Button>
