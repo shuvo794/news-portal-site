@@ -1,5 +1,9 @@
-import { Box, Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
+import { Box, Card, CardActionArea, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 import Rectangle from "../../../assets/HeroImage.png";
+import topnews1 from "../../../assets/top-news1.png";
+import topnews2 from "../../../assets/top-news2.png";
+import topnews3 from "../../../assets/top-news3.png";
+import topnews4 from "../../../assets/top-news4.png";
 import Image from "next/image";
 const latestNews = () => {
     return (
@@ -36,12 +40,107 @@ const latestNews = () => {
                 to announce our biggest tranche of security assistance to date:
                 approximately $2.
               </Typography>
-              <Typography className="bg-red-500 text-center rounded text-white my-4 p-1" >
+              <Typography className="bg-red-500 text-center rounded text-white my-4 p-1">
                 All news in this category
               </Typography>
             </CardContent>
           </CardActionArea>
         </Card>
+
+        <Grid
+          className="my-5"
+          container
+          rowSpacing={1}
+          columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+        >
+          <Grid item xs={6}>
+            <Card>
+              <CardActionArea>
+                <CardMedia>
+                  <Image src={topnews1} width={800} alt="HeroImage" />
+                </CardMedia>
+                <CardContent>
+                  <Typography gutterBottom component="div">
+                    Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S.
+                    Military Aid Package Yet
+                  </Typography>
+                  <Typography gutterBottom component="div">
+                    By Shuvo - Mar 18 2023
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    It is a long established fact that a reader will be
+                    distracted by the readable.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Grid>
+          <Grid item xs={6}>
+            <Card>
+              <CardActionArea>
+                <CardMedia>
+                  <Image src={Rectangle} width={800} alt="HeroImage" />
+                </CardMedia>
+                <CardContent>
+                  <Typography gutterBottom component="div">
+                    Battle Analysis: Russian Tank Armada vs Ukraine
+                  </Typography>
+                  <Typography gutterBottom component="div">
+                    By Shuvo - Mar 18 2023
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    It is a long established fact that a reader will be
+                    distracted by the readable.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Grid>
+          <Grid item xs={6}>
+            <Card>
+              <CardActionArea>
+                <CardMedia>
+                  <Image src={Rectangle} width={800} alt="HeroImage" />
+                </CardMedia>
+                <CardContent>
+                  <Typography gutterBottom component="div">
+                    Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S.
+                    Military Aid Package Yet
+                  </Typography>
+                  <Typography gutterBottom component="div">
+                    By Shuvo - Mar 18 2023
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    It is a long established fact that a reader will be
+                    distracted by the readable.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Grid>
+          <Grid item xs={6}>
+            <Card>
+              <CardActionArea>
+                <CardMedia>
+                  <Image src={Rectangle} width={800} alt="HeroImage" />
+                </CardMedia>
+                <CardContent>
+                  <Typography gutterBottom component="div">
+                    Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S.
+                    Military Aid Package Yet
+                  </Typography>
+                  <Typography gutterBottom component="div">
+                    By Shuvo - Mar 18 2023
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    It is a long established fact that a reader will be
+                    distracted by the readable.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Grid>
+        </Grid>
       </Box>
     );
 };
