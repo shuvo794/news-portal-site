@@ -57,7 +57,7 @@ const latestNews = () => {
             <Card>
               <CardActionArea>
                 <CardMedia>
-                  <Image src={topnews1} width={800} alt="HeroImage" />
+                  <Image src={topnews1} alt="HeroImage" />
                 </CardMedia>
                 <CardContent>
                   <Typography gutterBottom component="div">
@@ -79,7 +79,7 @@ const latestNews = () => {
             <Card>
               <CardActionArea>
                 <CardMedia>
-                  <Image src={Rectangle} width={800} alt="HeroImage" />
+                  <Image src={topnews2} alt="HeroImage" />
                 </CardMedia>
                 <CardContent>
                   <Typography gutterBottom component="div">
@@ -100,12 +100,11 @@ const latestNews = () => {
             <Card>
               <CardActionArea>
                 <CardMedia>
-                  <Image src={Rectangle} width={800} alt="HeroImage" />
+                  <Image src={topnews3} alt="HeroImage" />
                 </CardMedia>
                 <CardContent>
                   <Typography gutterBottom component="div">
-                    Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S.
-                    Military Aid Package Yet
+                    France’s Largest Business Summit to Conclude on Mar 22
                   </Typography>
                   <Typography gutterBottom component="div">
                     By Shuvo - Mar 18 2023
@@ -122,12 +121,11 @@ const latestNews = () => {
             <Card>
               <CardActionArea>
                 <CardMedia>
-                  <Image src={Rectangle} width={800} alt="HeroImage" />
+                  <Image src={topnews4}  alt="HeroImage" />
                 </CardMedia>
                 <CardContent>
                   <Typography gutterBottom component="div">
-                    Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S.
-                    Military Aid Package Yet
+                    Marquez Explains Lack of Confidence During Qatar GP Race
                   </Typography>
                   <Typography gutterBottom component="div">
                     By Shuvo - Mar 18 2023
