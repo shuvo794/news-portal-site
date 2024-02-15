@@ -46,6 +46,90 @@ const SideBar = () => {
             </Grid>
           </Grid>
         </Box>
+        <Box>
+          <Grid container spacing={2}>
+            <Grid item>
+              <ButtonBase sx={{ width: 128, height: 128 }}>
+                <Image src={Rectangle} alt="" />
+              </ButtonBase>
+            </Grid>
+            <Grid item xs={12} sm container>
+              <Grid item xs container direction="column" spacing={2}>
+                <Grid className="my-6" item xs>
+                  <Typography gutterBottom variant="subtitle1" component="div">
+                    Bitcoin Climbs as Elon Musk Says Tesla Likely to Accept it
+                  </Typography>
+                  <Typography variant="body2" gutterBottom>
+                    Mar 18 2023{" "}
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Box>
+        <Box>
+          <Grid container spacing={2}>
+            <Grid item>
+              <ButtonBase sx={{ width: 128, height: 128 }}>
+                <Image src={Rectangle} alt="" />
+              </ButtonBase>
+            </Grid>
+            <Grid item xs={12} sm container>
+              <Grid item xs container direction="column" spacing={2}>
+                <Grid className="my-6" item xs>
+                  <Typography gutterBottom variant="subtitle1" component="div">
+                    Bitcoin Climbs as Elon Musk Says Tesla Likely to Accept it
+                  </Typography>
+                  <Typography variant="body2" gutterBottom>
+                    Mar 18 2023{" "}
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Box>
+        <Box>
+          <Grid container spacing={2}>
+            <Grid item>
+              <ButtonBase sx={{ width: 128, height: 128 }}>
+                <Image src={Rectangle} alt="" />
+              </ButtonBase>
+            </Grid>
+            <Grid item xs={12} sm container>
+              <Grid item xs container direction="column" spacing={2}>
+                <Grid className="my-6" item xs>
+                  <Typography gutterBottom variant="subtitle1" component="div">
+                    Bitcoin Climbs as Elon Musk Says Tesla Likely to Accept it
+                  </Typography>
+                  <Typography variant="body2" gutterBottom>
+                    Mar 18 2023{" "}
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Box>
+        <Box>
+          <Grid container spacing={2}>
+            <Grid item>
+              <ButtonBase sx={{ width: 128, height: 128 }}>
+                <Image src={Rectangle} alt="" />
+              </ButtonBase>
+            </Grid>
+            <Grid item xs={12} sm container>
+              <Grid item xs container direction="column" spacing={2}>
+                <Grid className="my-6" item xs>
+                  <Typography gutterBottom variant="subtitle1" component="div">
+                    Bitcoin Climbs as Elon Musk Says Tesla Likely to Accept it
+                  </Typography>
+                  <Typography variant="body2" gutterBottom>
+                    Mar 18 2023{" "}
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Box>
       </Box>
     );
 };
