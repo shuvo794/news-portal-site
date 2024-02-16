@@ -19,9 +19,9 @@ const DynamicNews =async ({params, searchParams }) => {
         rowSpacing={1}
         columnSpacing={{ xs: 1, sm: 2, md: 3 }}
       >
-        {getAllDatas.map((getAllData) => (
-          <Grid key={getAllData._id} item xs={6}>
-            <Link>
+        {getAllDatas.map((news) => (
+          <Grid key={news._id} item xs={6}>
+            <Link href={`/${news.category}/${news._id}`}>
               <Card>
                 <CardActionArea>
                   <CardMedia
@@ -33,7 +33,7 @@ const DynamicNews =async ({params, searchParams }) => {
                     }}
                   >
                     <Image
-                      src={getAllData.thumbnail_url}
+                      src={news.thumbnail_url}
                       width={800}
                       height={100}
                       alt="HeroImage"
@@ -42,18 +42,17 @@ const DynamicNews =async ({params, searchParams }) => {
 
                   <CardContent>
                     <Typography gutterBottom variant="h6" component="div">
-                      {getAllData.title.length > 30
-                        ? getAllData.title.slice(0, 30) + "..."
-                        : getAllData.title}
+                      {news.title.length > 30
+                        ? news.title.slice(0, 30) + "..."
+                        : news.title}
                     </Typography>
                     <Typography gutterBottom component="div">
-                      By {getAllData.author.name} -{" "}
-                      {getAllData.author.published_date}
+                      By {news.author.name} - {news.author.published_date}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                      {getAllData.details.length > 200
-                        ? getAllData.details.slice(0, 200) + " ... "
-                        : getAllData.details}
+                      {news.details.length > 200
+                        ? news.details.slice(0, 200) + " ... "
+                        : news.details}
                     </Typography>
                   </CardContent>
                 </CardActionArea>
