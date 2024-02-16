@@ -46,7 +46,7 @@ const DynamicNews =async ({params, searchParams }) => {
                     {getAllData.author.published_date}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    {getAllData.details}
+                    {getAllData.details.length>200?getAllData.details.slice(0,200)+" ... ":getAllData.details}
                   </Typography>
                 </CardContent>
               </CardActionArea>
