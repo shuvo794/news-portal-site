@@ -39,7 +39,7 @@ const DynamicNews =async ({params, searchParams }) => {
 
                 <CardContent>
                   <Typography gutterBottom variant="h6" component="div">
-                    {getAllData.title}
+                    {getAllData.title.length>30?getAllData.title.slice(0,30)+"...":getAllData.title}
                   </Typography>
                   <Typography gutterBottom component="div">
                     By {getAllData.author.name} -{" "}
