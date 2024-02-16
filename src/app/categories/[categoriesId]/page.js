@@ -1,11 +1,10 @@
-import React from 'react';
 
-const DynamicNews = () => {
-    return (
-        <div>
-            <h2>DynamicNews</h2>
-        </div>
-    );
+const DynamicNews = ({  searchParams }) => {
+  return (
+    <div>
+      <h2>DynamicNews {searchParams.category} </h2>
+    </div>
+  );
 };
 
 export default DynamicNews;
