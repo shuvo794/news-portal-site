@@ -21,7 +21,7 @@ const DynamicNews =async ({params, searchParams }) => {
       >
         {getAllDatas.map((news) => (
           <Grid key={news._id} item xs={6}>
-            <Link href={`/${news.category}/${news._id}`}>
+            <Link href={`/${news.category.toLowerCase()}/${news._id}`}>
               <Card>
                 <CardActionArea>
                   <CardMedia
