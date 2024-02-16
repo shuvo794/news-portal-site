@@ -38,7 +38,7 @@ const DynamicNews =async ({params, searchParams }) => {
                 </CardMedia>
 
                 <CardContent>
-                  <Typography gutterBottom component="div">
+                  <Typography gutterBottom variant="h6" component="div">
                     {getAllData.title}
                   </Typography>
                   <Typography gutterBottom component="div">
