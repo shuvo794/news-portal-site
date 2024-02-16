@@ -21,7 +21,14 @@ const DynamicNews =async ({params, searchParams }) => {
           <Grid key={getAllData._id} item xs={6}>
             <Card>
               <CardActionArea>
-                <CardMedia>
+                <CardMedia
+                  sx={{
+                    "& img": {
+                      width: "100%",
+                      height:"250px"
+                  }
+                }}
+                >
                   <Image
                     src={getAllData.thumbnail_url}
                     width={800}
