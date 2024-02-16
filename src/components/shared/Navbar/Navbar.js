@@ -18,7 +18,7 @@ import Header from "../Header/Header";
 
 // Navbar Menu
 const navItems = [
-   {
+  {
     route: "Home",
     pathName: "/",
   },
@@ -27,8 +27,8 @@ const navItems = [
     pathName: "/pages",
   },
   {
-    route: "Category",
-    pathName: "/category",
+    route: "Categories",
+    pathName: "/categories",
   },
   {
     route: "News",

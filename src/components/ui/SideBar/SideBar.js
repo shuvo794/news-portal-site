@@ -1,6 +1,7 @@
 import { Box, ButtonBase, Card, CardActionArea, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import Rectangle from "../../../assets/side-top-news.png";
+import sideBottomImg from "../../../assets/side-bottom-img.png";
 
 const SideBar = () => {
     return (
@@ -11,9 +12,9 @@ const SideBar = () => {
               <Image src={Rectangle} width={800} alt="HeroImage" />
             </CardMedia>
             <Typography>
-              <p className="bg-[#192a56]  rounded text-white my-4 p-1">
+              <span className="bg-[#192a56]  rounded text-white my-4 py-4">
                 <marquee> The Technology is new of the world</marquee>
-              </p>
+              </span>
             </Typography>
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
@@ -130,6 +131,7 @@ const SideBar = () => {
             </Grid>
           </Grid>
         </Box>
+        <Image src={sideBottomImg} alt="sideBarImage" />
       </Box>
     );
 };
