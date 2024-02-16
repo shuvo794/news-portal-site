@@ -1,12 +1,14 @@
 import { getAllCategories } from "@/utils/getAllCategories";
+import { Box, Divider, Typography } from "@mui/material";
 
 const CategoryList = async () => {
     const {data:allCategories} = await getAllCategories();
     // console.log(allCategories);
     return (
-        <div>
-            <h2>Categories</h2>
-        </div>
+      <Box>
+            <Typography variant="h6" >Categories</Typography>
+            <Divider/>
+      </Box>
     );
 };
 

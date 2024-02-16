@@ -1,4 +1,4 @@
-import { Box, ButtonBase, Card, CardActionArea, CardContent, CardMedia, Grid, Typography } from "@mui/material";
+import { Box, ButtonBase, Card, CardActionArea, CardContent, CardMedia, Divider, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import Rectangle from "../../../assets/side-top-news.png";
 import sideBottomImg from "../../../assets/side-bottom-img.png";
@@ -47,6 +47,7 @@ const SideBar = () => {
             </Grid>
           </Grid>
         </Box>
+        <Divider />
         <Box>
           <Grid container spacing={2}>
             <Grid item>
@@ -68,6 +69,7 @@ const SideBar = () => {
             </Grid>
           </Grid>
         </Box>
+        <Divider />
         <Box>
           <Grid container spacing={2}>
             <Grid item>
@@ -89,6 +91,7 @@ const SideBar = () => {
             </Grid>
           </Grid>
         </Box>
+        <Divider />
         <Box>
           <Grid container spacing={2}>
             <Grid item>
@@ -110,6 +113,7 @@ const SideBar = () => {
             </Grid>
           </Grid>
         </Box>
+        <Divider />
         <Box>
           <Grid container spacing={2}>
             <Grid item>
