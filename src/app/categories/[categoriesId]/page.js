@@ -39,8 +39,7 @@ const DynamicNews =async ({params, searchParams }) => {
                     {getAllData.author.published_date}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    It is a long established fact that a reader will be
-                    distracted by the readable.
+                    {getAllData.details}
                   </Typography>
                 </CardContent>
               </CardActionArea>
