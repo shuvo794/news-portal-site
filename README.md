@@ -40,6 +40,4 @@ User Interface
         <td>
 <a href="#"><img src="https://user-images.githubusercontent.com/87040096/219964658-1e8a6ccf-ea9c-4253-b826-b095d0e3f947.png" alt="" width="30" height="30" /></a>
         </td>
- 
-    </tr>
 </table>
