@@ -1,19 +1,28 @@
 import { Box, Container, Typography } from "@mui/material";
 import Image from "next/image";
-import headingImage from "@/assets/The Dragon News.png";
+import headingImage from "../../assets/Header.png";
 import { getCurrentDate } from "@/utils/getCurrentDate";
 const Header = () => {
   const currentDate = getCurrentDate();
   return (
-    <Box className="w-full my-5">
+    <Box className="w-full my-3">
       <Container>
-        <Image
+        {/* <Image
           src={headingImage}
-          width={500}
-          height={500}
+         width={250}
           alt="logo"
           className=" mx-auto"
-        />
+        /> */}
+        <Typography
+          variant="h3"
+          color="black"
+          textAlign="center"
+          className="my-2"
+        >
+          <i className="font-bold  rounded">
+            The News <span className="text-red-600">Portal</span>
+          </i>
+        </Typography>
         <Typography
           variant="body2"
           color="gray"
