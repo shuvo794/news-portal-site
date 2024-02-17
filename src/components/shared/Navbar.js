@@ -1,65 +1,67 @@
-"use client"
-
+"use client";
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-import logo from "../../../assets/logo.png"
 import Image from "next/image";
-import Link from "next/link";
+import logo from "@/assets/logo.png";
 import { IconButton, Stack } from "@mui/material";
+
+// icons
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GoogleIcon from "@mui/icons-material/Google";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TelegramIcon from "@mui/icons-material/Telegram";
-import Header from "../Header/Header";
+import Link from "next/link";
 
-// Navbar Menu
+import Header from "./Header";
+
 const navItems = [
   {
     route: "Home",
-    pathName: "/",
+    pathname: "/",
   },
   {
     route: "Pages",
-    pathName: "/pages",
+    pathname: "/pages",
   },
   {
-    route: "Categories",
-    pathName: "categories/news?category=all-news",
+    route: "Category",
+    pathname: "/categories/news?category=all-news",
   },
   {
     route: "News",
-    pathName: "/news",
+    pathname: "/news",
   },
   {
     route: "About",
-    pathName: "/about",
+    pathname: "/about",
   },
   {
-    route: "Contuct",
-    pathName: "/contuct",
+    route: "Contact",
+    pathname: "/contact",
   },
 ];
 
 function Navbar() {
   return (
     <>
-      <Header/>
-      <AppBar className="bg-black" position="static">
+      <Header />
+      <AppBar position="static" className="bg-black">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <Image src={logo} width={100} height={100} alt="" />
+            <Image src={logo} width={100} height={100} alt="logo" />
 
-            <Box className="text-center w-full">
+            <Box className="w-full text-center">
               {navItems.map((item) => (
-                <Link key={item} href={item.pathName}>
+                <Link key={item} href={item.pathname}>
                   <Button className="text-white">{item.route}</Button>
                 </Link>
               ))}
             </Box>
+
             <Box
               sx={{
                 "& svg": {

@@ -1,12 +1,9 @@
-import Image from 'next/image';
-import notfound from '../assets/404.png'
-
-const notFound = () => {
-    return (
-      <div className="mx-auto">
-        <Image src={notfound} alt="not-found" />
-      </div>
-    );
+const NotFoundPage = () => {
+  return (
+    <div>
+      <h1>404!! Page Not Found!!!</h1>
+    </div>
+  );
 };
 
-export default notFound;
+export default NotFoundPage;

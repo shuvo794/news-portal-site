@@ -1,143 +1,75 @@
-import { Box, ButtonBase, Card, CardActionArea, CardContent, CardMedia, Divider, Grid, Typography } from "@mui/material";
+import {
+  Box,
+  Card,
+  CardActionArea,
+  CardContent,
+  CardMedia,
+  Typography,
+  Stack,
+  Divider,
+} from "@mui/material";
 import Image from "next/image";
-import Rectangle from "../../../assets/side-top-news.png";
-import sideBottomImg from "../../../assets/side-bottom-img.png";
+import sideBarNews from "@/assets/side-top-news.png";
+import sideBottomNews from "@/assets/side-bottom-img.png";
+import SidebarNewsCard from "./SideBarNewsCard";
 
 const SideBar = () => {
-    return (
-      <Box className="my-5">
-        <Card>
-          <CardActionArea>
-            <CardMedia>
-              <Image src={Rectangle} width={800} alt="HeroImage" />
-            </CardMedia>
-            <Typography>
-              <span className="bg-[#192a56]  rounded text-white my-4 py-4">
-                <marquee> The Technology is new of the world</marquee>
-              </span>
+  return (
+    <Box className="my-5">
+      <Card>
+        <CardActionArea>
+          <CardMedia>
+            <Image src={sideBarNews} width={800} alt="top news" />
+          </CardMedia>
+          <CardContent>
+            <p
+              className="
+                      w-[100px]
+                      bg-red-500
+                      px-2
+                      text-white
+                      my-5
+                      rounded
+                      "
+            >
+              Technology
+            </p>
+            <Typography gutterBottom variant="h5" component="div">
+              Bitcoin Climbs as Elon Musk Says Tesla Likely to Accept it Again
             </Typography>
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Bitcoin Climbs as Elon Musk Says Tesla Likely to Accept it
-              </Typography>
-              <Typography gutterBottom component="div">
-                By Shuvo - Mar 18 2023
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-        <Box>
-          <Grid container spacing={2}>
-            <Grid item>
-              <ButtonBase sx={{ width: 128, height: 128 }}>
-                <Image src={Rectangle} alt="" />
-              </ButtonBase>
-            </Grid>
-            <Grid item xs={12} sm container>
-              <Grid item xs container direction="column" spacing={2}>
-                <Grid className="my-6" item xs>
-                  <Typography gutterBottom variant="subtitle1" component="div">
-                    Bitcoin Climbs as Elon Musk Says Tesla Likely to Accept it
-                  </Typography>
-                  <Typography variant="body2" gutterBottom>
-                    Mar 18 2023{" "}
-                  </Typography>
-                </Grid>
-              </Grid>
-            </Grid>
-          </Grid>
-        </Box>
-        <Divider />
-        <Box>
-          <Grid container spacing={2}>
-            <Grid item>
-              <ButtonBase sx={{ width: 128, height: 128 }}>
-                <Image src={Rectangle} alt="" />
-              </ButtonBase>
-            </Grid>
-            <Grid item xs={12} sm container>
-              <Grid item xs container direction="column" spacing={2}>
-                <Grid className="my-6" item xs>
-                  <Typography gutterBottom variant="subtitle1" component="div">
-                    Bitcoin Climbs as Elon Musk Says Tesla Likely to Accept it
-                  </Typography>
-                  <Typography variant="body2" gutterBottom>
-                    Mar 18 2023{" "}
-                  </Typography>
-                </Grid>
-              </Grid>
-            </Grid>
-          </Grid>
-        </Box>
-        <Divider />
-        <Box>
-          <Grid container spacing={2}>
-            <Grid item>
-              <ButtonBase sx={{ width: 128, height: 128 }}>
-                <Image src={Rectangle} alt="" />
-              </ButtonBase>
-            </Grid>
-            <Grid item xs={12} sm container>
-              <Grid item xs container direction="column" spacing={2}>
-                <Grid className="my-6" item xs>
-                  <Typography gutterBottom variant="subtitle1" component="div">
-                    Bitcoin Climbs as Elon Musk Says Tesla Likely to Accept it
-                  </Typography>
-                  <Typography variant="body2" gutterBottom>
-                    Mar 18 2023{" "}
-                  </Typography>
-                </Grid>
-              </Grid>
-            </Grid>
-          </Grid>
-        </Box>
-        <Divider />
-        <Box>
-          <Grid container spacing={2}>
-            <Grid item>
-              <ButtonBase sx={{ width: 128, height: 128 }}>
-                <Image src={Rectangle} alt="" />
-              </ButtonBase>
-            </Grid>
-            <Grid item xs={12} sm container>
-              <Grid item xs container direction="column" spacing={2}>
-                <Grid className="my-6" item xs>
-                  <Typography gutterBottom variant="subtitle1" component="div">
-                    Bitcoin Climbs as Elon Musk Says Tesla Likely to Accept it
-                  </Typography>
-                  <Typography variant="body2" gutterBottom>
-                    Mar 18 2023{" "}
-                  </Typography>
-                </Grid>
-              </Grid>
-            </Grid>
-          </Grid>
-        </Box>
-        <Divider />
-        <Box>
-          <Grid container spacing={2}>
-            <Grid item>
-              <ButtonBase sx={{ width: 128, height: 128 }}>
-                <Image src={Rectangle} alt="" />
-              </ButtonBase>
-            </Grid>
-            <Grid item xs={12} sm container>
-              <Grid item xs container direction="column" spacing={2}>
-                <Grid className="my-6" item xs>
-                  <Typography gutterBottom variant="subtitle1" component="div">
-                    Bitcoin Climbs as Elon Musk Says Tesla Likely to Accept it
-                  </Typography>
-                  <Typography variant="body2" gutterBottom>
-                    Mar 18 2023{" "}
-                  </Typography>
-                </Grid>
-              </Grid>
-            </Grid>
-          </Grid>
-        </Box>
-        <Image src={sideBottomImg} alt="sideBarImage" />
+            <Typography gutterBottom className="my-3">
+              By Tanmoy Parvez - Mar 18 2023
+            </Typography>
+
+            <Typography variant="body2" color="text.secondary">
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout........
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+      <Divider />
+
+      <Stack my={3} columnGap={2}>
+        <SidebarNewsCard />
+        <SidebarNewsCard />
+        <SidebarNewsCard />
+        <SidebarNewsCard />
+        <SidebarNewsCard />
+        <SidebarNewsCard />
+        <SidebarNewsCard />
+      </Stack>
+
+      <Box>
+        <Image
+          src={sideBottomNews}
+          height={400}
+          width={350}
+          alt="rectangle world image"
+        />
       </Box>
-    );
+    </Box>
+  );
 };
 
 export default SideBar;

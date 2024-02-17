@@ -1,26 +1,34 @@
-import { getAllNews } from "@/utils/getAllNews";
-import { Box, Card, CardActionArea, CardContent, CardMedia, Grid, Typography } from "@mui/material";
+import { getCategoryNews } from "@/utils/getCategoryNews";
+import {
+  Box,
+  Card,
+  CardActionArea,
+  CardContent,
+  CardMedia,
+  Grid,
+  Typography,
+} from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 
-const DynamicNews =async ({params, searchParams }) => {
-    // console.log(searchParams);
-    const {data:getAllDatas} =await getAllNews(searchParams.category);
-    // console.log(data);
+const DynamicNewsPage = async ({ params, searchParams }) => {
+  // console.log(searchParams);
+  const { data } = await getCategoryNews(searchParams.category);
+  // console.log(data);
   return (
-    <Box className="mt-5">
-      <h2>
-        Total <span className="font-bold">{searchParams.category}</span> News{" "}
-        {getAllDatas.length}
-      </h2>
+    <div className="my-5">
+      <h1>
+        Total <span className="font-bold">{searchParams.category}</span> news:{" "}
+        {data.length}
+      </h1>
       <Grid
-        className="my-5"
+        className="mt-5"
         container
         rowSpacing={1}
         columnSpacing={{ xs: 1, sm: 2, md: 3 }}
       >
-        {getAllDatas.map((news) => (
-          <Grid key={news._id} item xs={6}>
+        {data.map((news) => (
+          <Grid key={news.id} item xs={6}>
             <Link href={`/${news.category.toLowerCase()}/${news._id}`}>
               <Card>
                 <CardActionArea>
@@ -36,22 +44,33 @@ const DynamicNews =async ({params, searchParams }) => {
                       src={news.thumbnail_url}
                       width={800}
                       height={100}
-                      alt="HeroImage"
+                      alt="top news"
                     />
                   </CardMedia>
-
                   <CardContent>
-                    <Typography gutterBottom variant="h6" component="div">
+                    <span
+                      className="
+                      bg-red-500
+                      px-2
+                      text-white
+                      my-3
+                      rounded
+                      "
+                    >
+                      {news.category}
+                    </span>
+                    <Typography gutterBottom variant="h6">
                       {news.title.length > 30
                         ? news.title.slice(0, 30) + "..."
                         : news.title}
                     </Typography>
-                    <Typography gutterBottom component="div">
+                    <Typography gutterBottom className="my-2">
                       By {news.author.name} - {news.author.published_date}
                     </Typography>
+
                     <Typography variant="body2" color="text.secondary">
                       {news.details.length > 200
-                        ? news.details.slice(0, 200) + " ... "
+                        ? news.details.slice(0, 200) + "..."
                         : news.details}
                     </Typography>
                   </CardContent>
@@ -61,8 +80,8 @@ const DynamicNews =async ({params, searchParams }) => {
           </Grid>
         ))}
       </Grid>
-    </Box>
+    </div>
   );
 };
 
-export default DynamicNews;
+export default DynamicNewsPage;
