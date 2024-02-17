@@ -4,7 +4,8 @@ The The News Portal software has been developed to store user read a news easy w
 
  About This Project 
 -------------------
-The Management Information System (MIS) is a concept that is very important for modern life and makes our life more convenient. With increasing the use of Technology, Our Work has been Gradually Computerized. Nowadays Large Numbers of Work are completed within a short time and also doing less work. A The News Portal is a full stack system that can be used for mapping a  News  daily work. It is configurable and can be configured to meet most individual needs. This Application is very easy to use. It can work accurately and very smoothly in different scenarios. It reduces effort and workload and increases work efficiency. In aspects of time value, it is worthy.
+The Management Information System  is a concept that is very important for modern life and makes our life more convenient. With increasing the use of Technology, Our Work has been Gradually Computerized. Nowadays Large Numbers of Work are completed within a short time and also doing less work. A The News Portal is a full stack system that can be used for mapping a  News  daily work. It is configurable and can be configured to meet most individual needs. This Application is very easy to use. It can work accurately and very smoothly in different scenarios. It reduces effort and workload and increases work efficiency. In aspects of time value, it is worthy.
 
 User Interface
 --------------
+![Uploading screencapture-localhost-3000-2024-02-17-14_26_57.png…]()

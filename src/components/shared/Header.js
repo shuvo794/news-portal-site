@@ -1,6 +1,5 @@
 import { Box, Container, Typography } from "@mui/material";
-import Image from "next/image";
-import headingImage from "../../assets/Header.png";
+
 import { getCurrentDate } from "@/utils/getCurrentDate";
 const Header = () => {
   const currentDate = getCurrentDate();
